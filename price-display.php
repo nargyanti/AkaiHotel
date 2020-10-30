@@ -49,7 +49,7 @@
             <p>Based floor: Rp <?php echo $floor;?></p><br>
             <p>Based type: Rp <?php echo $type;?></p><br>
             <p>Membership: Rp <?php echo $membership;?></p><br>
-            <p>Day(s): <?php echo $days;?></p><br>
+            <p>Day(s): <?php echo $days;?> day(s)</p><br>
             <p><b>TOTAL: Rp <?php echo $total;?></b></p><br>
         </main>
 
