@@ -15,7 +15,7 @@
 
         <main id="content">
             <h2>Price Check</h2>
-            <form method="POST" action="price-display.php">
+            <form method="POST">
                 <label for="floor">Floor</label><br>
                 <input type="number" name="floor" id="floor"><br>
                 <label for="type">Type</label><br>
@@ -32,13 +32,28 @@
                 <label for="days">Day(s)</label><br>
                 <input type="number" name="days" id="days"><br>
                 <br>
-                <input type="submit" value="Check" class="button">                                
-            </form>
+                <input type="submit" value="Check" class="button" onclick=priceValidation()>                                
+            </form>            
         </main>
 
         <footer>
             <?php include 'src/components/footer.php';?>
         </footer>
-        <script src="src/main.js"></script>
+        <script>
+            function priceValidation() {
+                let floor = document.getElementById("floor");                
+                let type = document.getElementById("type");
+                let membership = document.getElementById("membership");
+                let days = document.getElementById("days");
+
+                console.log(type)                
+                
+                if (floor.value > 0 && days.value > 0) {
+                    $('form').attr('action', 'price-display.php')
+                } else {
+                    alert("Data can't be empty!")
+                } 
+            }
+        </script>
     </body>
 </html>

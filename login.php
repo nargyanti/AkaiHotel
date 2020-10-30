@@ -16,11 +16,11 @@
             <input type="text" name="username" id="username"><br>
             <label for="username">Password:</label><br>
             <input type="password" name="password" id="password"><br><br>
-            <input type="submit" value="Login" onclick="usernameValidation()" class="button">
+            <input type="submit" value="Login" onclick="loginValidation()" class="button">
         </form>
     </div>
     <script>
-        function usernameValidation() {
+        function loginValidation() {
             let username = document.getElementById("username");                       
             let password = document.getElementById("password");        
 
